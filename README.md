@@ -21,7 +21,7 @@
 <p>Add this to your <code>pubspec.yaml</code> file:</p>
 
 <pre><code>dependencies:
-  inner_shadow_container: ^1.0.1
+  inner_shadow_container: ^1.0.2
 </code></pre>
 
 <p>Then run:</p>

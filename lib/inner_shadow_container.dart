@@ -1,19 +1,41 @@
-import 'dart:ui';
 import 'package:flutter/material.dart';
 
-/// A container widget that applies inner shadow effect from specified directions.
+/// A customizable container widget that applies inner shadow effect
+/// from specified directions like top-left, top-right, etc.
+///
+/// Perfect for neumorphic and soft UI design patterns.
 class InnerShadowContainer extends StatelessWidget {
+  /// The height of the container.
   final double? height;
+
+  /// The width of the container.
   final double? width;
+
+  /// The border radius of the container.
   final double borderRadius;
+
+  /// The background color of the container.
   final Color backgroundColor;
+
+  /// Whether to apply inner shadow from the top-left direction.
   final bool isShadowTopLeft;
+
+  /// Whether to apply inner shadow from the top-right direction.
   final bool isShadowTopRight;
+
+  /// Whether to apply inner shadow from the bottom-right direction.
   final bool isShadowBottomRight;
+
+  /// Whether to apply inner shadow from the bottom-left direction.
   final bool isShadowBottomLeft;
+
+  /// The child widget to display inside the container.
   final Widget? child;
+
+  /// Alignment of the child widget.
   final AlignmentGeometry alignment;
 
+  /// Creates an [InnerShadowContainer].
   const InnerShadowContainer({
     super.key,
     this.height,
@@ -30,7 +52,10 @@ class InnerShadowContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final hasShadow = isShadowTopLeft || isShadowTopRight || isShadowBottomRight || isShadowBottomLeft;
+    final hasShadow = isShadowTopLeft ||
+        isShadowTopRight ||
+        isShadowBottomRight ||
+        isShadowBottomLeft;
 
     return Stack(
       children: [
@@ -84,17 +109,33 @@ class InnerShadowContainer extends StatelessWidget {
   }
 }
 
-/// The painter responsible for rendering the inner shadow.
+/// A custom painter to draw the inner shadow effect.
 class InnerShadowPainter extends CustomPainter {
+  /// Color of the inner shadow.
   final Color shadowColor;
+
+  /// Blur radius for the shadow.
   final double blur;
+
+  /// Offset applied to the shadow.
   final Offset offset;
+
+  /// Border radius of the shadow clipping.
   final double borderRadius;
+
+  /// Whether to paint shadow on top-left.
   final bool isShadowTopLeft;
+
+  /// Whether to paint shadow on top-right.
   final bool isShadowTopRight;
+
+  /// Whether to paint shadow on bottom-right.
   final bool isShadowBottomRight;
+
+  /// Whether to paint shadow on bottom-left.
   final bool isShadowBottomLeft;
 
+  /// Creates an [InnerShadowPainter].
   InnerShadowPainter({
     required this.shadowColor,
     required this.blur,
@@ -116,7 +157,8 @@ class InnerShadowPainter extends CustomPainter {
     final rrect = RRect.fromRectAndRadius(rect, Radius.circular(borderRadius));
 
     final outer = Path()
-      ..addRect(Rect.fromLTRB(-size.width, -size.height, size.width * 2, size.height * 2));
+      ..addRect(Rect.fromLTRB(
+          -size.width, -size.height, size.width * 2, size.height * 2));
 
     final inner = Path()
       ..addRRect(rrect)
@@ -127,7 +169,8 @@ class InnerShadowPainter extends CustomPainter {
     void drawShadow(double dx, double dy) {
       canvas.save();
       canvas.translate(dx, dy);
-      canvas.drawPath(Path.combine(PathOperation.difference, outer, inner), paint);
+      canvas.drawPath(
+          Path.combine(PathOperation.difference, outer, inner), paint);
       canvas.restore();
     }
 

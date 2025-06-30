@@ -3,7 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:inner_shadow_container/inner_shadow_container.dart';
 
 void main() {
-  testWidgets('renders InnerShadowContainer with child', (WidgetTester tester) async {
+  testWidgets('renders InnerShadowContainer with child',
+      (WidgetTester tester) async {
     await tester.pumpWidget(
       MaterialApp(
         home: Scaffold(
