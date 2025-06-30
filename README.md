@@ -1,32 +1,31 @@
 <h1>InnerShadowContainer 🪞</h1>
 
-<p>A customizable Flutter widget that adds a subtle and flexible <strong>inner shadow</strong> effect to containers — perfect for neumorphism and modern UI design.</p>
+<p><strong>InnerShadowContainer</strong> is a highly customizable <strong>Flutter widget</strong> that adds beautiful and soft <strong>inner shadows</strong> to any container, ideal for <strong>neumorphic UI</strong> and modern <strong>soft design</strong> styles. Perfect for developers building elegant UIs in Flutter using subtle depth effects.</p>
+
+<p>Use it to bring <strong>neumorphism</strong>, <strong>container shadows</strong>, and <strong>soft UI designs</strong> to life in your app with zero dependencies.</p>
 
 <hr>
 
 <h2>✨ Features</h2>
 <ul>
-  <li>🔹 Inner shadow from any direction</li>
-  <li>🔹 Customizable blur, offset, radius, and color</li>
-  <li>🔹 Lightweight and dependency-free</li>
-  <li>🔹 Fully customizable and reusable widget</li>
-  <li>🔹 Suitable for neumorphic-style UIs</li>
+  <li>✅ Inner shadow on any side: top-left, top-right, bottom-right, bottom-left</li>
+  <li>✅ Fully customizable blur, offset, radius, and shadow color</li>
+  <li>✅ Lightweight, dependency-free and pure Flutter implementation</li>
+  <li>✅ Supports circular, rounded, or rectangular containers</li>
+  <li>✅ Perfect for <strong>neumorphic</strong> and <strong>soft UI</strong> designs</li>
 </ul>
 
 <hr>
 
 <h2>🚀 Installation</h2>
-
-<p>Add the following to your <code>pubspec.yaml</code> file:</p>
+<p>Add this to your <code>pubspec.yaml</code> file:</p>
 
 <pre><code>dependencies:
-  inner_shadow_container: ^1.0.0
+  inner_shadow_container: ^1.0.1
 </code></pre>
 
 <p>Then run:</p>
-
-<pre><code>flutter pub get
-</code></pre>
+<pre><code>flutter pub get</code></pre>
 
 <hr>
 
@@ -61,66 +60,16 @@ InnerShadowContainer(
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td><code>height</code></td>
-      <td><code>double?</code></td>
-      <td><code>null</code></td>
-      <td>Height of the container</td>
-    </tr>
-    <tr>
-      <td><code>width</code></td>
-      <td><code>double?</code></td>
-      <td><code>null</code></td>
-      <td>Width of the container</td>
-    </tr>
-    <tr>
-      <td><code>borderRadius</code></td>
-      <td><code>double</code></td>
-      <td><code>12.0</code></td>
-      <td>Border radius of the container</td>
-    </tr>
-    <tr>
-      <td><code>backgroundColor</code></td>
-      <td><code>Color</code></td>
-      <td><code>Colors.white</code></td>
-      <td>Background color of the container</td>
-    </tr>
-    <tr>
-      <td><code>isShadowTopLeft</code></td>
-      <td><code>bool</code></td>
-      <td><code>false</code></td>
-      <td>Apply inner shadow on top-left side</td>
-    </tr>
-    <tr>
-      <td><code>isShadowTopRight</code></td>
-      <td><code>bool</code></td>
-      <td><code>false</code></td>
-      <td>Apply inner shadow on top-right side</td>
-    </tr>
-    <tr>
-      <td><code>isShadowBottomRight</code></td>
-      <td><code>bool</code></td>
-      <td><code>false</code></td>
-      <td>Apply inner shadow on bottom-right side</td>
-    </tr>
-    <tr>
-      <td><code>isShadowBottomLeft</code></td>
-      <td><code>bool</code></td>
-      <td><code>false</code></td>
-      <td>Apply inner shadow on bottom-left side</td>
-    </tr>
-    <tr>
-      <td><code>child</code></td>
-      <td><code>Widget?</code></td>
-      <td><code>null</code></td>
-      <td>Optional child widget inside the container</td>
-    </tr>
-    <tr>
-      <td><code>alignment</code></td>
-      <td><code>Alignment</code></td>
-      <td><code>Alignment.center</code></td>
-      <td>Alignment of the child inside the container</td>
-    </tr>
+    <tr><td><code>height</code></td><td><code>double?</code></td><td><code>null</code></td><td>Height of the container</td></tr>
+    <tr><td><code>width</code></td><td><code>double?</code></td><td><code>null</code></td><td>Width of the container</td></tr>
+    <tr><td><code>borderRadius</code></td><td><code>double</code></td><td><code>12.0</code></td><td>Border radius of the container</td></tr>
+    <tr><td><code>backgroundColor</code></td><td><code>Color</code></td><td><code>Colors.white</code></td><td>Background color of the container</td></tr>
+    <tr><td><code>isShadowTopLeft</code></td><td><code>bool</code></td><td><code>false</code></td><td>Apply inner shadow on top-left side</td></tr>
+    <tr><td><code>isShadowTopRight</code></td><td><code>bool</code></td><td><code>false</code></td><td>Apply inner shadow on top-right side</td></tr>
+    <tr><td><code>isShadowBottomRight</code></td><td><code>bool</code></td><td><code>false</code></td><td>Apply inner shadow on bottom-right side</td></tr>
+    <tr><td><code>isShadowBottomLeft</code></td><td><code>bool</code></td><td><code>false</code></td><td>Apply inner shadow on bottom-left side</td></tr>
+    <tr><td><code>child</code></td><td><code>Widget?</code></td><td><code>null</code></td><td>Optional child inside the container</td></tr>
+    <tr><td><code>alignment</code></td><td><code>Alignment</code></td><td><code>Alignment.center</code></td><td>Child alignment</td></tr>
   </tbody>
 </table>
 
@@ -141,26 +90,26 @@ InnerShadowContainer(
 
 <hr>
 
-<h2>💡 Tip</h2>
+<h2>💡 Pro Tip</h2>
 
-<p>You can combine multiple sides for richer depth:</p>
+<p>You can combine multiple shadows for enhanced depth:</p>
 
 <pre><code class="language-dart">isShadowTopLeft: true,
+isShadowTopRight: true,
+isShadowBottomLeft: true,
 isShadowBottomRight: true,
 </code></pre>
 
-<p>It works well with soft UI themes like neumorphism.</p>
+<p>This gives a full immersive <strong>neumorphic feel</strong> to your containers.</p>
 
 <hr>
 
 <h2>📄 License</h2>
-
-<p>This project is licensed under the MIT License © 2025 <a href="https://github.com/karanpadaliya/">Karan Padaliya</a></p>
+<p>Licensed under the MIT License © 2025 <a href="https://github.com/karanpadaliya/">Karan Padaliya</a></p>
 
 <hr>
 
 <h2>🙌 Contributions</h2>
+<p>Pull requests and stars are welcome! If you use this in your project, give it a ⭐️ on <a href="https://github.com/karanpadaliya/Inner_Shadow_Container">GitHub</a>.</p>
 
-<p>Pull requests are welcome! For major changes, please open an issue first to discuss what you'd like to change.</p>
-
-<p>Made with ❤️ in Flutter.</p>
+<p>Made with ❤️ in Flutter — Powered by creativity and clean UI!</p>
