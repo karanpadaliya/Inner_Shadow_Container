@@ -155,7 +155,7 @@ isShadowBottomRight: true,
 
 <h2>📄 License</h2>
 
-<p>This project is licensed under the MIT License © 2025 <a href="https://github.com/yourgithub">Karan Padaliya</a></p>
+<p>This project is licensed under the MIT License © 2025 <a href="https://github.com/karanpadaliya/">Karan Padaliya</a></p>
 
 <hr>
 
