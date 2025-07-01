@@ -83,7 +83,9 @@ InnerShadowContainer(
 
 <h2>🧪 Example App</h2>
 
-<p>The example below showcases all shadow directions and combinations:</p>
+<p>The example below showcases all shadow directions and combinations:
+<img src="InnerShadowConatiner.png" alt="Inner Shadow Container Preview" width="200" height="400" />
+
 
 <pre><code class="language-dart">InnerShadowContainer(
   height: 140,
