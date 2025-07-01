@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file.
 
 ---
 
+## [1.0.3]
+**Released:** July 01, 2025
+
+🛠️ Code Formatting:
+
+---
+
 ## [1.0.2]
 **Released:** June 30, 2025
 

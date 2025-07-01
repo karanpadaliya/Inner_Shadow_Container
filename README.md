@@ -21,7 +21,7 @@
 <p>Add this to your <code>pubspec.yaml</code> file:</p>
 
 <pre><code>dependencies:
-  inner_shadow_container: ^1.0.2
+  inner_shadow_container: ^1.0.3
 </code></pre>
 
 <p>Then run:</p>
@@ -105,11 +105,8 @@ isShadowBottomRight: true,
 <hr>
 
 <h2>📄 License</h2>
-<p>Licensed under the MIT License © 2025 <a href="https://github.com/karanpadaliya/">Karan Padaliya</a></p>
+<p>Licensed under the MIT License © 2025 <a href="https://www.linkedin.com/in/karan-padaliya-73aaa81b4/">Karan Padaliya</a></p>
 
 <hr>
-
-<h2>🙌 Contributions</h2>
-<p>Pull requests and stars are welcome! If you use this in your project, give it a ⭐️ on <a href="https://github.com/karanpadaliya/Inner_Shadow_Container">GitHub</a>.</p>
 
 <p>Made with ❤️ in Flutter — Powered by creativity and clean UI!</p>
