@@ -83,7 +83,7 @@ InnerShadowContainer(
 
 <h2>🧪 Example App</h2>
 
-<p>The example below showcases all shadow directions and combinations:
+<p>The example below showcases all shadow directions and combinations:</p>
 <img src="InnerShadowConatiner.png" alt="Inner Shadow Container Preview" width="200" height="400" />
 
 
