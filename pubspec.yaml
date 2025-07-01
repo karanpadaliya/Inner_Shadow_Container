@@ -1,6 +1,6 @@
 name: inner_shadow_container
 description: A customizable Flutter widget to add soft, neumorphic-style inner shadows to containers and UI components.
-version: 1.0.3
+version: 1.0.4
 
 homepage: https://github.com/karanpadaliya/Inner_Shadow_Container
 repository: https://github.com/karanpadaliya/Inner_Shadow_Container

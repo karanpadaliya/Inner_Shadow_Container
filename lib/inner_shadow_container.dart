@@ -1,9 +1,17 @@
 import 'package:flutter/material.dart';
 
-/// A customizable container widget that applies inner shadow effect
-/// from specified directions like top-left, top-right, etc.
+/// A customizable container widget that applies beautiful inner shadows
+/// from any side (top-left, top-right, bottom-right, bottom-left).
 ///
-/// Perfect for neumorphic and soft UI design patterns.
+/// Perfect for neumorphic, soft UI, and modern elevated surfaces.
+///
+///
+/// ⚡ **Key Features:**
+/// ✅ Inner shadow on any side: top-left, top-right, bottom-right, bottom-left
+/// ✅ Fully customizable blur, offset, radius, and shadow color
+/// ✅ Lightweight, dependency-free and pure Flutter implementation
+/// ✅ Supports circular, rounded, or rectangular containers
+/// ✅ Perfect for neumorphic and soft UI designs
 class InnerShadowContainer extends StatelessWidget {
   /// The height of the container.
   final double? height;
@@ -29,7 +37,16 @@ class InnerShadowContainer extends StatelessWidget {
   /// Whether to apply inner shadow from the bottom-left direction.
   final bool isShadowBottomLeft;
 
-  /// The child widget to display inside the container.
+  /// The blur radius for the shadow.
+  final double blur;
+
+  /// The offset of the shadow.
+  final Offset offset;
+
+  /// The shadow color.
+  final Color shadowColor;
+
+  /// The child widget inside the container.
   final Widget? child;
 
   /// Alignment of the child widget.
@@ -46,6 +63,9 @@ class InnerShadowContainer extends StatelessWidget {
     this.isShadowTopRight = false,
     this.isShadowBottomRight = false,
     this.isShadowBottomLeft = false,
+    this.blur = 4.0,
+    this.offset = const Offset(4, -3),
+    this.shadowColor = Colors.black26,
     this.child,
     this.alignment = Alignment.center,
   });
@@ -75,9 +95,9 @@ class InnerShadowContainer extends StatelessWidget {
               borderRadius: BorderRadius.circular(borderRadius),
               child: CustomPaint(
                 painter: InnerShadowPainter(
-                  shadowColor: const Color(0x1A2FBBA4),
-                  blur: 1.4,
-                  offset: const Offset(0, 1),
+                  shadowColor: shadowColor,
+                  blur: blur,
+                  offset: offset,
                   borderRadius: borderRadius,
                   isShadowTopLeft: isShadowTopLeft,
                   isShadowTopRight: isShadowTopRight,
@@ -87,55 +107,22 @@ class InnerShadowContainer extends StatelessWidget {
               ),
             ),
           ),
-        Positioned.fill(
-          child: ClipRRect(
-            borderRadius: BorderRadius.circular(borderRadius),
-            child: CustomPaint(
-              painter: InnerShadowPainter(
-                shadowColor: Colors.black26,
-                blur: 4.0,
-                offset: const Offset(4, -3),
-                borderRadius: borderRadius,
-                isShadowTopLeft: isShadowTopLeft,
-                isShadowTopRight: isShadowTopRight,
-                isShadowBottomRight: isShadowBottomRight,
-                isShadowBottomLeft: isShadowBottomLeft,
-              ),
-            ),
-          ),
-        ),
       ],
     );
   }
 }
 
-/// A custom painter to draw the inner shadow effect.
+/// A custom painter to draw the inner shadow effect from selected directions.
 class InnerShadowPainter extends CustomPainter {
-  /// Color of the inner shadow.
   final Color shadowColor;
-
-  /// Blur radius for the shadow.
   final double blur;
-
-  /// Offset applied to the shadow.
   final Offset offset;
-
-  /// Border radius of the shadow clipping.
   final double borderRadius;
-
-  /// Whether to paint shadow on top-left.
   final bool isShadowTopLeft;
-
-  /// Whether to paint shadow on top-right.
   final bool isShadowTopRight;
-
-  /// Whether to paint shadow on bottom-right.
   final bool isShadowBottomRight;
-
-  /// Whether to paint shadow on bottom-left.
   final bool isShadowBottomLeft;
 
-  /// Creates an [InnerShadowPainter].
   InnerShadowPainter({
     required this.shadowColor,
     required this.blur,
@@ -170,7 +157,9 @@ class InnerShadowPainter extends CustomPainter {
       canvas.save();
       canvas.translate(dx, dy);
       canvas.drawPath(
-          Path.combine(PathOperation.difference, outer, inner), paint);
+        Path.combine(PathOperation.difference, outer, inner),
+        paint,
+      );
       canvas.restore();
     }
 

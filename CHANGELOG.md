@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.4]
+**Released:** July 02, 2025
+
+🚀 New Features & Full Demo Showcase:
+
+| Feature                                | Description                                                                 |
+|----------------------------------------|-----------------------------------------------------------------------------|
+| ✅ Inner shadow on all sides           | Top-left, top-right, bottom-left, bottom-right (individually or combined)  |
+| 🎨 Fully customizable visuals          | Supports custom blur, offset, radius, and shadow color                      |
+| 🧱 Shape flexibility                   | Works with rectangular, rounded, or fully circular shapes                   |
+| 💡 Soft UI/Neumorphism ready           | Matches modern design systems with depth & subtle shadows                   |
+| 🧪 example/lib/main.dart               | Complete usage demo with multiple configurations                            |
+
 ---
 
 ## [1.0.3]

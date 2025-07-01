@@ -21,7 +21,7 @@
 <p>Add this to your <code>pubspec.yaml</code> file:</p>
 
 <pre><code>dependencies:
-  inner_shadow_container: ^1.0.3
+  inner_shadow_container: ^1.0.4
 </code></pre>
 
 <p>Then run:</p>
@@ -38,6 +38,9 @@ InnerShadowContainer(
   width: 120,
   backgroundColor: Colors.white,
   borderRadius: 20,
+  blur: 6,
+  offset: Offset(4, 4),
+  shadowColor: Colors.black26,
   isShadowTopLeft: true,
   isShadowBottomRight: true,
   child: Center(
@@ -64,6 +67,9 @@ InnerShadowContainer(
     <tr><td><code>width</code></td><td><code>double?</code></td><td><code>null</code></td><td>Width of the container</td></tr>
     <tr><td><code>borderRadius</code></td><td><code>double</code></td><td><code>12.0</code></td><td>Border radius of the container</td></tr>
     <tr><td><code>backgroundColor</code></td><td><code>Color</code></td><td><code>Colors.white</code></td><td>Background color of the container</td></tr>
+    <tr><td><code>blur</code></td><td><code>double</code></td><td><code>4.0</code></td><td>Shadow blur radius</td></tr>
+    <tr><td><code>offset</code></td><td><code>Offset</code></td><td><code>Offset(4, -3)</code></td><td>Shadow offset direction</td></tr>
+    <tr><td><code>shadowColor</code></td><td><code>Color</code></td><td><code>Colors.black26</code></td><td>Color of the inner shadow</td></tr>
     <tr><td><code>isShadowTopLeft</code></td><td><code>bool</code></td><td><code>false</code></td><td>Apply inner shadow on top-left side</td></tr>
     <tr><td><code>isShadowTopRight</code></td><td><code>bool</code></td><td><code>false</code></td><td>Apply inner shadow on top-right side</td></tr>
     <tr><td><code>isShadowBottomRight</code></td><td><code>bool</code></td><td><code>false</code></td><td>Apply inner shadow on bottom-right side</td></tr>
@@ -77,16 +83,34 @@ InnerShadowContainer(
 
 <h2>🧪 Example App</h2>
 
+<p>The example below showcases all shadow directions and combinations:</p>
+
 <pre><code class="language-dart">InnerShadowContainer(
-  height: 120,
-  width: 120,
-  backgroundColor: Colors.white,
+  height: 140,
+  width: 140,
   borderRadius: 20,
+  backgroundColor: Colors.white,
+  blur: 8,
+  offset: Offset(5, 5),
+  shadowColor: Colors.black12,
   isShadowTopLeft: true,
+  isShadowTopRight: true,
+  isShadowBottomLeft: true,
   isShadowBottomRight: true,
-  child: Icon(Icons.favorite, color: Colors.red, size: 40),
+  child: Center(
+    child: Padding(
+      padding: EdgeInsets.all(8.0),
+      child: Text(
+        'All Corners Shadow',
+        style: TextStyle(fontSize: 13, fontWeight: FontWeight.w600),
+        textAlign: TextAlign.center,
+      ),
+    ),
+  ),
 );
 </code></pre>
+
+💻 View the full example: `example/lib/main.dart`
 
 <hr>
 
